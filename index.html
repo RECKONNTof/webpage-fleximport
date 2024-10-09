@@ -26,13 +26,31 @@
         </nav>
     </section>
     <section class="hero">
+        <div class="hero-loader">
+            <div class="loader-container">
+                <div class="loader">
+                    <p>CARGANDO</p>
+                    <div class="words">
+                        <span class="word">PRECIOS</span>
+                        <span class="word">EFICIENCIA</span>
+                        <span class="word">CONFIABILIDAD</span>
+                        <span class="word">CALIDAD</span>
+                        <span class="word">PRECIOS</span>
+                    </div>
+                </div>
+            </div>
+        </div>
         <div class="hero-logo">
             <img src="./utils/images/logo_blanco.png" alt="Logo de Fleximport">
         </div>
         <div class="hero-content">
-            <h2>Bienvenido a</h2>
-            <h1>FLEXIMPORT</h1>
-            <nav>
+            <div class="text-container">
+                <h2>Bienvenido a</h2>
+            </div>
+            <div class="text-container">
+                <h1>FLEXIMPORT</h1>
+            </div>
+            <nav class="menu">
                 <ul>
                     <li><a href="#inicio" aria-label="Ir al inicio">INICIO</a></li>
                     <li><a href="#productos" aria-label="Ver productos">PRODUCTOS</a></li>
@@ -42,7 +60,7 @@
             </nav>
         </div>
     </section>
-    <section class="oferta">
+    <section class="oferta" id="nosotros">
         <div class="oferta-content">
             <h3>OFRECEMOS</h3>
             <h2>PARA TI</h2>
@@ -79,32 +97,106 @@
             <img src="./utils/images/vehiculo.png">
         </div>
     </section>
-    <section class="productos">
+    <section class="productos" id="productos">
         <div class="title">
             <h3>NUESTROS</h3>
             <h2>PRODUCTOS</h2>
         </div>
         <div class="carousel-container">
             <div class="left">
-                <svg height="800px" width="800px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" xml:space="preserve" fill="#000000">
-                    <g id="SVGRepo_bgCarrier" stroke-width="0"/>
-                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"/>
-                    <g id="SVGRepo_iconCarrier"> <g> <polygon style="fill:#ffffff;" points="0,256 512,512 344.276,256 512,0 "/> </g> </g>
+                <svg height="800px" width="800px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" xml:space="preserve"
+                    fill="#000000">
+                    <g id="SVGRepo_bgCarrier" stroke-width="0" />
+                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" />
+                    <g id="SVGRepo_iconCarrier">
+                        <g>
+                            <polygon style="fill:#ffffff;" points="0,256 512,512 344.276,256 512,0 " />
+                        </g>
+                    </g>
                 </svg>
             </div>
             <div class="carousel">
-                <div class="item"></div>
-                <div class="item"></div>
-                <div class="item"></div>
-                <div class="item"></div>
+                <div class="item">
+                    <div class="img"></div>
+                    <h2>CINTA PERMANENTE DE SEGURIDAD</h2>
+                    <div class="price">
+                        <h3>$170,00</h3>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="img"></div>
+                    <h2>CINTA PERMANENTE DE SEGURIDAD</h2>
+                    <div class="price">
+                        <h3>$170,00</h3>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="img"></div>
+                    <h2>CINTA PERMANENTE DE SEGURIDAD</h2>
+                    <div class="price">
+                        <h3>$170,00</h3>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="img"></div>
+                    <h2>CINTA PERMANENTE DE SEGURIDAD</h2>
+                    <div class="price">
+                        <h3>$170,00</h3>
+                    </div>
+                </div>
             </div>
             <div class="right">
-                <svg height="800px" width="800px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" xml:space="preserve" fill="#000000">
-                    <g id="SVGRepo_bgCarrier" stroke-width="0"/>
-                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"/>
-                    <g id="SVGRepo_iconCarrier"> <g> <polygon style="fill:#ffffff;" points="512,256 0,0 167.724,256 0,512 "/> </g> </g>    
+                <svg height="800px" width="800px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" xml:space="preserve"
+                    fill="#000000">
+                    <g id="SVGRepo_bgCarrier" stroke-width="0" />
+                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" />
+                    <g id="SVGRepo_iconCarrier">
+                        <g>
+                            <polygon style="fill:#ffffff;" points="512,256 0,0 167.724,256 0,512 " />
+                        </g>
+                    </g>
                 </svg>
             </div>
+        </div>
+    </section>
+    <section class="cotiza" id="contacto">
+        <div class="title">
+            <h2>¡COTIZA AHORA!</h2>
+        </div>
+        <div class="options">
+            <div class="correo">
+                <svg width="800px" height="800px" viewBox="0 -3.5 32 32" version="1.1"
+                    xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                    xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+                    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+                        <g id="Icon-Set-Filled" sketch:type="MSLayerGroup"
+                            transform="translate(-414.000000, -261.000000)" fill="#ffffff">
+                            <path
+                                d="M430,275.916 L426.684,273.167 L415.115,285.01 L444.591,285.01 L433.235,273.147 L430,275.916 L430,275.916 Z M434.89,271.89 L445.892,283.329 C445.955,283.107 446,282.877 446,282.634 L446,262.862 L434.89,271.89 L434.89,271.89 Z M414,262.816 L414,282.634 C414,282.877 414.045,283.107 414.108,283.329 L425.147,271.927 L414,262.816 L414,262.816 Z M445,261 L415,261 L430,273.019 L445,261 L445,261 Z"
+                                id="mail" sketch:type="MSShapeGroup">
+
+                            </path>
+                        </g>
+                    </g>
+                </svg>
+                <h3>CONTACTANOS VÍA CORREO</h3>
+            </div>
+            <div class="whatsapp">
+                <svg width="800px" height="800px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M3.50002 12C3.50002 7.30558 7.3056 3.5 12 3.5C16.6944 3.5 20.5 7.30558 20.5 12C20.5 16.6944 16.6944 20.5 12 20.5C10.3278 20.5 8.77127 20.0182 7.45798 19.1861C7.21357 19.0313 6.91408 18.9899 6.63684 19.0726L3.75769 19.9319L4.84173 17.3953C4.96986 17.0955 4.94379 16.7521 4.77187 16.4751C3.9657 15.176 3.50002 13.6439 3.50002 12ZM12 1.5C6.20103 1.5 1.50002 6.20101 1.50002 12C1.50002 13.8381 1.97316 15.5683 2.80465 17.0727L1.08047 21.107C0.928048 21.4637 0.99561 21.8763 1.25382 22.1657C1.51203 22.4552 1.91432 22.5692 2.28599 22.4582L6.78541 21.1155C8.32245 21.9965 10.1037 22.5 12 22.5C17.799 22.5 22.5 17.799 22.5 12C22.5 6.20101 17.799 1.5 12 1.5ZM14.2925 14.1824L12.9783 15.1081C12.3628 14.7575 11.6823 14.2681 10.9997 13.5855C10.2901 12.8759 9.76402 12.1433 9.37612 11.4713L10.2113 10.7624C10.5697 10.4582 10.6678 9.94533 10.447 9.53028L9.38284 7.53028C9.23954 7.26097 8.98116 7.0718 8.68115 7.01654C8.38113 6.96129 8.07231 7.046 7.84247 7.24659L7.52696 7.52195C6.76823 8.18414 6.3195 9.2723 6.69141 10.3741C7.07698 11.5163 7.89983 13.314 9.58552 14.9997C11.3991 16.8133 13.2413 17.5275 14.3186 17.8049C15.1866 18.0283 16.008 17.7288 16.5868 17.2572L17.1783 16.7752C17.4313 16.5691 17.5678 16.2524 17.544 15.9269C17.5201 15.6014 17.3389 15.308 17.0585 15.1409L15.3802 14.1409C15.0412 13.939 14.6152 13.9552 14.2925 14.1824Z"
+                        fill="#ffffff" />
+                </svg>
+                <h3>CONTACTANOS VÍA WHATSAPP</h3>
+            </div>
+        </div>
+        <div class="left">
+            <img src="./utils/images/logo_blanco.png" alt="Logo de Fleximport">
+        </div>
+        <div class="right">
+            <img src="./utils/images/logo_blanco.png" alt="Logo de Fleximport">
         </div>
     </section>
 </body>
@@ -149,6 +241,10 @@
         font-family: "alfarn", sans-serif;
     }
 
+    html {
+        overflow-x: hidden;
+    }
+
     body {
         margin: 0;
     }
@@ -160,7 +256,7 @@
         z-index: 1;
         padding: 2vh 0 3vh 0;
         opacity: 0;
-        transition: opacity 0.5s ease;
+        transition: opacity 0.3s ease;
     }
 
     .header.visible {
@@ -239,6 +335,9 @@
         top: -8vh;
         left: 0;
         height: 115vh;
+        animation: left-right 2s ease-in-out forwards;
+        animation-delay: 2s;
+        transform: translateX(-65%);
     }
 
     .hero-content {
@@ -252,19 +351,35 @@
         justify-content: center;
     }
 
+    .hero-content .text-container {
+        overflow: hidden;
+    }
+
     .hero-content h1 {
         font-family: 'CenturyGothicPaneuropeanBold', sans-serif;
         font-size: 18vh;
         margin: 0;
+        animation: h1-in 0.5s linear forwards;
+        animation-delay: 5s;
+        transform: translateY(-100%);
     }
 
     .hero-content h2 {
         margin: 0;
         font-size: 10vh;
+        animation: h2-in 0.5s linear forwards;
+        animation-delay: 5s;
+        transform: translateY(100%);
     }
 
     .hero-content nav {
         margin-top: 4vh;
+    }
+
+    .hero-content nav {
+        opacity: 0;
+        animation: menu-in 0.5 ease-in forwards;
+        animation-delay: 5.5s;
     }
 
     .hero-content nav ul {
@@ -397,7 +512,7 @@
         background-color: var(--purple);
         justify-content: center;
         align-items: center;
-        flex-wrap: wrap;
+        flex-direction: column;
     }
 
     .productos .title {
@@ -425,20 +540,18 @@
         display: flex;
         width: 100%;
     }
-    
-    .carousel-container .left svg {
-        height: 50px;
-        width: auto;
-    }
 
+    .carousel-container .left svg,
     .carousel-container .right svg {
-        height: 50px;
-        width: auto;
+        height: auto;
+        width: 4vw;
+        cursor: pointer;
     }
 
     .carousel-container .carousel {
         width: 80vw;
         height: fit-content;
+        display: flex;
     }
 
     .carousel-container .left,
@@ -446,5 +559,305 @@
         width: 10vw;
         display: flex;
         justify-content: center;
+        align-items: center;
+    }
+
+    .carousel-container .carousel .item {
+        width: 25%;
+        height: fit-content;
+        padding: 2vh 2vw;
+        font-family: 'CenturyGothicPaneuropeanBold', sans-serif;
+        text-align: center;
+    }
+
+    .carousel-container .carousel .item .img {
+        width: 100%;
+        aspect-ratio: 1 / 1;
+        background-color: var(--white);
+        border-radius: 3vh;
+    }
+
+    .carousel-container .carousel .item h2 {
+        font-size: 3.4vh;
+        font-weight: 600;
+        color: var(--white);
+    }
+
+    .carousel-container .carousel .item .price {
+        width: 100%;
+        background-color: var(--white);
+        color: var(--purple);
+        font-size: 3vh;
+        border-radius: 1vh;
+    }
+
+    .cotiza {
+        display: flex;
+        height: 100vh;
+        overflow: hidden;
+        background-image: linear-gradient(to top, #9954b2, #8b4da7, #7e479d, #714092, #643a87);
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .cotiza .title {
+        width: fit-content;
+        height: fit-content;
+        background-color: var(--white);
+        border-radius: 1.4vh;
+        padding: 0.5vh 2vw;
+    }
+
+    .cotiza .title h2 {
+        font-size: 10vh;
+        font-weight: 600;
+        margin: 0;
+        color: var(--purple);
+    }
+
+    .cotiza .options {
+        display: flex;
+        margin-top: 15vh;
+        width: 85%;
+    }
+
+
+    .cotiza .options .correo,
+    .cotiza .options .whatsapp {
+        width: 50%;
+        text-align: center;
+    }
+
+    .cotiza .options .correo svg,
+    .cotiza .options .whatsapp svg {
+        height: 25vh;
+        width: auto;
+        cursor: pointer;
+        transition: all 0.2s ease;
+    }
+
+    .cotiza .options .correo svg:hover,
+    .cotiza .options .whatsapp svg:hover {
+        transform: scale(1.1);
+    }
+
+    .cotiza .options .correo h3,
+    .cotiza .options .whatsapp h3 {
+        color: var(--white);
+        font-family: 'agencyfb_regular', sans-serif;
+        font-size: 4.5vh;
+        margin: 1.5vh 0 0 0;
+    }
+
+    .correo::after {
+        content: '';
+        display: block;
+        height: 150%;
+        width: 0.5vw;
+        background-color: var(--white);
+        position: relative;
+        top: -115%;
+        left: 100%;
+    }
+
+    .cotiza .left img,
+    .cotiza .right img {
+        height: 100vh;
+    }
+
+    .cotiza .left {
+        position: absolute;
+        left: -38vw;
+    }
+
+    .cotiza .right {    
+        position: absolute;
+        right: -38vw;
+    }
+
+    .hero-loader {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: 'agencyfb_bold', sans-serif;
+        animation: loader-out 2s linear forwards;
+        animation-delay: 3s;
+    }
+
+    .loader-container {
+        padding: 1rem 2rem;
+    }
+
+    .loader {
+        color: var(--white);
+        font-family: 'agencyfb_bold', sans-serif;
+        font-size: 50px;
+        -webkit-box-sizing: content-box;
+        box-sizing: content-box;
+        height: 60px;
+        padding: 10px 10px;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        border-radius: 8px;
+        animation: loader-move 2s ease-out forwards;
+        animation-delay: 2s;
+    }
+
+    .loader p {
+        margin-top: 0;
+        animation: primary-out 2s linear forwards;
+        animation-delay: 3s;
+    }
+
+    .words {
+        overflow: hidden;
+        position: relative;
+    }
+
+    .words::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        z-index: 20;
+    }
+
+    .word {
+        display: block;
+        height: 100%;
+        padding-left: 6px;
+        color: var(--cool-gray);
+        animation: words-move 4s infinite, secondary-out 2s linear forwards;
+        animation-delay: 0s, 3s;
+    }
+
+    @keyframes words-move {
+        10% {
+            transform: translateY(-102%);
+        }
+
+        25% {
+            transform: translateY(-100%);
+        }
+
+        35% {
+            transform: translateY(-202%);
+        }
+
+        50% {
+            transform: translateY(-200%);
+        }
+
+        60% {
+            transform: translateY(-302%);
+        }
+
+        75% {
+            transform: translateY(-300%);
+        }
+
+        85% {
+            transform: translateY(-402%);
+        }
+
+        100% {
+            transform: translateY(-400%);
+        }
+    }
+
+    @keyframes loader-move {
+        0% {
+            transform: translateX(0%);
+        }
+        
+        100% {
+            transform: translateX(55%);
+        }
+    }
+
+    @keyframes primary-out {
+        0% {
+            color: var(--white);
+        }
+
+        75% {
+            color: var(--white);
+        }
+
+        100% {
+            color: transparent;
+        }
+    }
+
+    @keyframes secondary-out {
+        0% {
+            color: var(--cool-gray);
+        }
+        
+        75% {
+            color: var(--cool-gray);
+        }
+
+        100% {
+            color: transparent;
+        }
+    }
+
+    @keyframes loader-out {
+        100% {
+            visibility: hidden;
+        }
+    }
+
+    @keyframes menu-in {
+        50% {
+            opacity: 1;
+        }
+
+        100% {
+            opacity: 2;
+        }
+    }
+
+    @keyframes h1-in {
+        0% {
+            transform: translateY(-100%);
+        }
+
+        50% {
+            transform: translateY(-50%);
+        }
+
+        100% {
+            transform: translateY(-0%);
+        }
+    }
+
+    @keyframes h2-in {
+        0% {
+            transform: translateY(100%);
+        }
+
+        50% {
+            transform: translateY(50%);
+        }
+
+        100% {
+            transform: translateY(0%);
+        }
+    }
+
+    @keyframes left-right {
+        0% {
+            transform: translateX(-65%);
+        }
+        
+        100% {
+            transform: translateX(0%);
+        }
     }
 </style>
