@@ -18,14 +18,14 @@
         </div>
         <nav>
             <ul>
-                <li><a href="#inicio" aria-label="Ir al inicio">INICIO</a></li>
-                <li><a href="#productos" aria-label="Ver productos">PRODUCTOS</a></li>
-                <li><a href="#nosotros" aria-label="Conoce más sobre nosotros">NOSOTROS</a></li>
-                <li><a href="#contacto" aria-label="Ir a la sección de contacto">CONTACTO</a></li>
+                <li><a href="#inicio" class="link-inicio" aria-label="Ir al inicio">INICIO</a></li>
+                <li><a href="#nosotros" class="link-nosotros" aria-label="Conoce más sobre nosotros">NOSOTROS</a></li>
+                <li><a href="#productos" class="link-productos" aria-label="Ver productos">PRODUCTOS</a></li>
+                <li><a href="#contacto" class="link-contacto" aria-label="Ir a la sección de contacto">CONTACTO</a></li>
             </ul>
         </nav>
     </section>
-    <section class="hero">
+    <section class="hero" id="inicio">
         <div class="hero-loader">
             <div class="loader-container">
                 <div class="loader">
@@ -52,10 +52,10 @@
             </div>
             <nav class="menu">
                 <ul>
-                    <li><a href="#inicio" aria-label="Ir al inicio">INICIO</a></li>
-                    <li><a href="#productos" aria-label="Ver productos">PRODUCTOS</a></li>
-                    <li><a href="#nosotros" aria-label="Conoce más sobre nosotros">NOSOTROS</a></li>
-                    <li><a href="#contacto" aria-label="Ir a la sección de contacto">CONTACTO</a></li>
+                    <li><a href="#inicio" class="link-inicio" aria-label="Ir al inicio">INICIO</a></li>
+                    <li><a href="#nosotros" class="link-nosotros" aria-label="Conoce más sobre nosotros">NOSOTROS</a></li>
+                    <li><a href="#productos" class="link-productos" aria-label="Ver productos">PRODUCTOS</a></li>
+                    <li><a href="#contacto" class="link-contacto" aria-label="Ir a la sección de contacto">CONTACTO</a></li>
                 </ul>
             </nav>
         </div>
@@ -200,7 +200,7 @@
         </div>
     </section>
 </body>
-<script src="./index.js?op=v000003"></script>
+<script src="./index.js?op=v000013"></script>
 
 </html>
 
@@ -223,7 +223,7 @@
     :root {
         --purple: #643a87;
         --light-purple: #8663a9;
-        --soft-purple: #c8ade7;
+        --soft-purple: #e9d5ff;
         --dark-purple: #432764;
         --green: #87a83a;
         --orange: #f28705;
@@ -295,7 +295,7 @@
         height: 5vh;
         border-radius: 0.6vh;
         border: none;
-        color: var(--eminence);
+        color: var(--purple);
         background-color: var(--white);
         font-weight: 700;
         width: 10vw;
@@ -335,8 +335,8 @@
         top: -8vh;
         left: 0;
         height: 115vh;
-        animation: left-right 2s ease-in-out forwards;
-        animation-delay: 2s;
+        animation: left-right 1s ease forwards;
+        animation-delay: 1.5s;
         transform: translateX(-65%);
     }
 
@@ -344,7 +344,7 @@
         color: var(--white);
         text-align: center;
         position: relative;
-        left: -18vh;
+        left: -12vw;
         line-height: 0.9;
         display: flex;
         flex-direction: column;
@@ -359,17 +359,18 @@
         font-family: 'CenturyGothicPaneuropeanBold', sans-serif;
         font-size: 18vh;
         margin: 0;
-        animation: h1-in 0.5s linear forwards;
-        animation-delay: 5s;
+        animation: h1-in 0.4s linear forwards;
+        animation-delay: 3s;
         transform: translateY(-100%);
     }
 
     .hero-content h2 {
         margin: 0;
         font-size: 10vh;
-        animation: h2-in 0.5s linear forwards;
-        animation-delay: 5s;
+        animation: h2-in 0.4s linear forwards;
+        animation-delay: 3s;
         transform: translateY(100%);
+        color: var(--soft-purple);
     }
 
     .hero-content nav {
@@ -378,8 +379,8 @@
 
     .hero-content nav {
         opacity: 0;
-        animation: menu-in 0.5 ease-in forwards;
-        animation-delay: 5.5s;
+        animation: menu-in 1s ease forwards;
+        animation-delay: 3s;
     }
 
     .hero-content nav ul {
@@ -395,8 +396,8 @@
         height: 5.5vh;
         border-radius: 0.6vh;
         border: none;
-        color: var(--eminence);
-        background-color: var(--white);
+        color: var(--purple);
+        background-color: var(--soft-purple);
         font-weight: 700;
         width: 10vw;
         margin: 0 0.5vw;
@@ -412,8 +413,7 @@
 
     .hero-content nav ul li a:hover {
         transform: translateY(-0.8vh);
-        background-color: var(--soft-purple);
-        color: var(--white);
+        background-color: var(--white);
     }
 
     .oferta {
@@ -503,6 +503,12 @@
 
     .oferta-logo img {
         height: 80vh;
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+
+    .oferta-logo.presentation img {
+        animation: car-in 1s ease forwards;
     }
 
     .productos {
@@ -510,7 +516,7 @@
         height: 100vh;
         overflow: hidden;
         background-color: var(--purple);
-        justify-content: center;
+        justify-content: end;
         align-items: center;
         flex-direction: column;
     }
@@ -546,6 +552,12 @@
         height: auto;
         width: 4vw;
         cursor: pointer;
+        transition: all 0.2s ease;
+    }
+
+    .carousel-container .left svg:hover,
+    .carousel-container .right svg:hover {
+        transform: scale(1.1);
     }
 
     .carousel-container .carousel {
@@ -575,12 +587,14 @@
         aspect-ratio: 1 / 1;
         background-color: var(--white);
         border-radius: 3vh;
+        cursor: pointer;
     }
 
     .carousel-container .carousel .item h2 {
         font-size: 3.4vh;
         font-weight: 600;
         color: var(--white);
+        cursor: pointer;
     }
 
     .carousel-container .carousel .item .price {
@@ -589,6 +603,12 @@
         color: var(--purple);
         font-size: 3vh;
         border-radius: 1vh;
+        cursor: pointer;
+    }
+
+    .carousel-container .carousel .item:hover .img {
+        transform: scale(1.05);
+        transition: transform 0.2s ease;
     }
 
     .cotiza {
@@ -684,34 +704,31 @@
         justify-content: center;
         align-items: center;
         font-family: 'agencyfb_bold', sans-serif;
-        animation: loader-out 2s linear forwards;
-        animation-delay: 3s;
+        animation-delay: 2s;
     }
 
     .loader-container {
-        padding: 1rem 2rem;
+        transform: translateX(0%);
+        animation: loader-move 1.2s ease forwards;
+        animation-delay: 1.5s;
     }
 
     .loader {
         color: var(--white);
         font-family: 'agencyfb_bold', sans-serif;
-        font-size: 50px;
+        font-size: 9vh;
         -webkit-box-sizing: content-box;
         box-sizing: content-box;
-        height: 60px;
-        padding: 10px 10px;
+        height: 9vh;
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
-        border-radius: 8px;
-        animation: loader-move 2s ease-out forwards;
-        animation-delay: 2s;
     }
 
     .loader p {
         margin-top: 0;
-        animation: primary-out 2s linear forwards;
-        animation-delay: 3s;
+        animation: primary-out 1s linear forwards;
+        animation-delay: 2s;
     }
 
     .words {
@@ -729,10 +746,10 @@
     .word {
         display: block;
         height: 100%;
-        padding-left: 6px;
-        color: var(--cool-gray);
-        animation: words-move 4s infinite, secondary-out 2s linear forwards;
-        animation-delay: 0s, 3s;
+        padding-left: 0.5vw;
+        color: var(--soft-purple);
+        animation: words-move 4s infinite, secondary-out 1s linear forwards;
+        animation-delay: 0s, 2s;
     }
 
     @keyframes words-move {
@@ -775,7 +792,7 @@
         }
         
         100% {
-            transform: translateX(55%);
+            transform: translateX(20vw);
         }
     }
 
@@ -784,7 +801,7 @@
             color: var(--white);
         }
 
-        75% {
+        50% {
             color: var(--white);
         }
 
@@ -795,11 +812,11 @@
 
     @keyframes secondary-out {
         0% {
-            color: var(--cool-gray);
+            color: var(--soft-purple);
         }
         
         75% {
-            color: var(--cool-gray);
+            color: var(--soft-purple);
         }
 
         100% {
@@ -858,6 +875,22 @@
         
         100% {
             transform: translateX(0%);
+        }
+    }
+
+    @keyframes car-in {
+        0% {
+            transform: translateX(-100%);
+            opacity: 0;
+        }
+        
+        25% {
+            opacity: 0;
+        }
+
+        100% {
+            transform: translateX(0%);
+            opacity: 1;
         }
     }
 </style>
