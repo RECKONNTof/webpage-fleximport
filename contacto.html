@@ -27,16 +27,14 @@
                 <textarea class="textarea" rows="4" placeholder="Escribe tu mensaje aqui..."></textarea>
             </div>
             <div class="btn-container">
-                <button>
-                    <div class="svg-wrapper-1">
-                        <div class="svg-wrapper">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
-                                <path fill="none" d="M0 0h24v24H0z"></path>
-                                <path fill="currentColor"
-                                    d="M1.946 9.315c-.522-.174-.527-.455.01-.634l19.087-6.362c.529-.176.832.12.684.638l-5.454 19.086c-.15.529-.455.547-.679.045L12 14l6-8-8 6-8.054-2.685z">
-                                </path>
-                            </svg>
-                        </div>
+                <button class="btn-enviar">
+                    <div class="svg">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                            <path fill="none" d="M0 0h24v24H0z"></path>
+                            <path fill="currentColor"
+                                d="M1.946 9.315c-.522-.174-.527-.455.01-.634l19.087-6.362c.529-.176.832.12.684.638l-5.454 19.086c-.15.529-.455.547-.679.045L12 14l6-8-8 6-8.054-2.685z">
+                            </path>
+                        </svg>
                     </div>
                     <span>ENVIAR</span>
                 </button>
@@ -100,10 +98,15 @@
         flex-direction: column;
         width: 100vw;
         height: 100vh;
-        background-image: linear-gradient(to bottom, #9954b2, #8b4da7, #7e479d, #714092, #643a87);
+        background: url('./utils/images/mail2.svg') no-repeat center center,
+            linear-gradient(to bottom, #9954b2, #8b4da7, #7e479d, #714092, #643a87);
+        background-blend-mode: overlay; 
+        background-size: 100%;
+        position: relative;
         align-items: center;
         justify-content: center;
     }
+
 
     .contacto h2 {
         margin: 0;
@@ -125,7 +128,7 @@
         outline: none;
         border-radius: 0.8vh;
         border: 0.4vh solid var(--white);
-        background-color: transparent;
+        background-color: var(--purple);
         padding: 3vh 2.5vw 2.5vh 2.5vw;
         color: var(--white);
         font-family: 'agencyfb_regular', sans-serif;
@@ -142,7 +145,7 @@
         outline: none;
         border-radius: 0.8vh;
         border: 0.4vh solid var(--white);
-        background-color: transparent;
+        background-color: var(--purple);
         padding: 3vh 2.5vw 2.5vh 2.5vw;
         color: var(--white);
         font-family: 'agencyfb_regular', sans-serif;
@@ -160,8 +163,7 @@
         justify-content: center;
     }
 
-    /* From Uiverse.io by adamgiebl */
-    button {
+    .btn-enviar {
         margin-top: 3vh;
         font-size: 3vh;
         background: var(--soft-purple);
@@ -179,31 +181,32 @@
         justify-content: center;
     }
 
-    button span {
+    .btn-enviar span {
         display: block;
         margin-left: 0.3em;
         transition: all 0.3s ease-in-out;
     }
 
-    button svg {
+    .btn-enviar svg {
         display: block;
         transform-origin: center center;
         transition: transform 0.3s ease-in-out;
+        height: 4.5vh;
     }
 
-    button:hover .svg-wrapper {
+    .btn-enviar:hover .svg {
         animation: fly-1 0.6s ease-in-out infinite alternate;
     }
 
-    button:hover svg {
+    .btn-enviar:hover svg {
         transform: translateX(1.2em) rotate(45deg) scale(1.1);
     }
 
-    button:hover span {
+    .btn-enviar:hover span {
         transform: translateX(5em);
     }
 
-    button:active {
+    .btn-enviar:active {
         transform: scale(0.95);
     }
 
