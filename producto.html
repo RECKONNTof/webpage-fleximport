@@ -12,33 +12,33 @@
     <body>
         <section class="productos">
             <div class="descripcion-producto">
-                <div class="img-detalle">
+                <div class="img-descripcion">
                 </div>
-                <div class="img-detalle">
+                <div class="img-descripcion">
                 </div>
                 <div class="text-descripcion">
                     <h2>Caja de cinta pega y despega</h2>
-                    <h3>S160</h3>
+                    <h3>S160 (13 rollos x caja)</h3>
                     <p>
-                        Cinta pega y despega 13mm x 1540/1000m x 6mm de adhesivo. (13 rollos x caja)
+                        Cinta pega y despega 13mm x 1540/1000m x 6mm de adhesivo. 
                         Especial para colocar en fundas abre facil como: fundas de revistas, fundas de CD, 
                         fundas para mascarilla y textiles etc.
                     </p> 
                 </div>
             </div>
-            <!-- <div class="detalleProducto">
-                <div class="txt-detalle">
-                    <h2>Detalles del producto</h2>
+            <h2 class="detalle-title">Detalles del producto</h2>
+            <div class="detalle-producto">
+                <div class="text-detalle">
                     <p>
                         Cinta pega y despega 13mm x 1540/1000m x 6mm de adhesivo. (13 rollos x caja)
                         Especial para colocar en fundas abre facil como: fundas de revistas, fundas de CD, 
                         fundas para mascarilla y textiles etc.
                     </p> 
                 </div>
-                <div class="img-detalle-x2">
+                <div class="img-detalle">
                 </div>
-            </div> -->
-            <!-- <div class="footerProducto">
+            </div>
+            <div class="footer-producto">
                 <div class="contacto">
                     <h2>¿Tienes dudas?</h2>
                     <p>Contáctate con nostros para recibir atención personalizada</p>
@@ -114,7 +114,7 @@
                         </div>
                     </div>
                 </div>
-            </div> -->
+            </div>
         </section> 
     </body>
 </html>
@@ -168,76 +168,91 @@
         width: 100vw;
         height: 100vh;
         background: linear-gradient(to bottom, #9954b2, #8b4da7, #7e479d, #714092, #643a87);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
     }
 
     .descripcion-producto,
-    .detalleProducto {
+    .detalle-producto {
         display: flex;
-        flex-wrap: wrap;
+        width: 100%;
+        justify-content: space-evenly;
     }
 
-    .img-detalle {
-        height: 200px;
-        width: 250px;
+    .img-descripcion {
+        height: 30vh;
+        width: 20vw;
         background-color: var(--white);
-        border-radius: 10px;
-        margin: 20px 15px;
-    }
-
-    .txt-detalle {
-        width: 50%;
-        padding: 20px;
-        color: var(--white);
-    }
-
-    .txt-detalle p {
-        font-size: 22px;
+        border-radius: 0.6vh;
     }
 
     .text-descripcion {
-        width: 50%;
-        padding: 20px;
+        width: 45vw;
         color: var(--white);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
     }
 
     .text-descripcion h2 {
-        font-size: 5.5vh;
+        font-size: 5vh;
         margin: 0;
     }
 
     .text-descripcion h3 {
+        font-size: 2.5vh;
         margin: 0;
     }
 
     .text-descripcion p {
         font-family: 'CenturyGothicPaneuropeanBold', sans-serif;
-        font-size: 18px;
+        font-size: 2.5vh;
         margin: 0;
     }
 
-    .img-detalle-x2 {
-        height: 200px;
-        width: 450px;
-        background-color: var(--white);
-        border-radius: 10px;
-        margin: 20px 15px;
+    .detalle-title {
+        font-size: 4vh;
+        margin: 0;
+        color: var(--white);
     }
 
-    .footerProducto {
+    .img-detalle {
+        height: 30vh;
+        width: 25vw;
+        background-color: var(--white);
+        border-radius: 0.6vh;
+    }
+
+    .text-detalle {
+        width: 45vw;
+        color: var(--white);
+        display: flex;
+        align-items: center;
+    }
+
+    .text-detalle p {
+        font-family: 'CenturyGothicPaneuropeanBold', sans-serif;
+        font-size: 2.5vh;
+        margin: 0;
+    }
+
+    .footer-producto {
         color: var(--white);
         display: flex;
     }
 
-    .footerProducto .contacto {
+    .footer-producto .contacto {
         width: 50%;
     }
 
-    .footerProducto .contacto p {
+    .footer-producto .contacto p {
         font-family: 'CenturyGothicPaneuropeanBold', sans-serif;
         font-size: 22px;
     }
 
-    .footerProducto .recomendacion {
+    .footer-producto .recomendacion {
         width: 50%;
     }
 
