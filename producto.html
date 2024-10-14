@@ -166,12 +166,13 @@
 
     .productos {
         width: 100vw;
-        height: 100vh;
+        min-height: 100vh;
         background: linear-gradient(to bottom, #9954b2, #8b4da7, #7e479d, #714092, #643a87);
         display: flex;
         justify-content: center;
         align-items: center;
         flex-direction: column;
+        padding-top: 5vh;
     }
 
     .descripcion-producto,
@@ -214,7 +215,7 @@
 
     .detalle-title {
         font-size: 4vh;
-        margin: 0;
+        margin: 8vh 0 5vh 0;
         color: var(--white);
     }
 
@@ -241,6 +242,7 @@
     .footer-producto {
         color: var(--white);
         display: flex;
+        padding: 8vh 5vw;
     }
 
     .footer-producto .contacto {
@@ -254,6 +256,11 @@
 
     .footer-producto .recomendacion {
         width: 50%;
+        text-align: center;
+    }
+
+    .footer-producto .recomendacion h3 {
+        margin: 4vh 0;
     }
 
     .recomendacion-container {
@@ -303,6 +310,7 @@
         display: flex;
         align-items: center;
         margin: 5px 0;  
+        cursor: pointer;
     }
 
     .contacto-container .item svg {

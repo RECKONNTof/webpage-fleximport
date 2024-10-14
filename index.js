@@ -33,6 +33,8 @@ document.addEventListener("DOMContentLoaded", function () {
     observer.observe(oferta);
 });
 
+
+//funciones de botones
 $('.link-inicio').on('click', function(event) {
     event.preventDefault();
     document.getElementById('inicio').scrollIntoView({ behavior: 'smooth' }); 
@@ -51,4 +53,16 @@ $('.link-productos').on('click', function(event) {
 $('.link-contacto').on('click', function(event) {
     event.preventDefault();
     document.getElementById('contacto').scrollIntoView({ behavior: 'smooth' }); 
+});
+$('.link-contacto').on('click', function(event) {
+    event.preventDefault();
+    document.getElementById('contacto').scrollIntoView({ behavior: 'smooth' }); 
+});
+$('.correo').on('click', function(event) {
+    event.preventDefault();
+    window.location.href = "/contacto.html";
+});
+$('.carousel .item').on('click', function(event) {
+    event.preventDefault();
+    window.location.href = "/producto.html";
 });
