@@ -60,9 +60,9 @@ $('.link-contacto').on('click', function(event) {
 });
 $('.correo').on('click', function(event) {
     event.preventDefault();
-    window.location.href = "/contacto.html";
+    window.location.href = "./contacto.html";
 });
 $('.carousel .item').on('click', function(event) {
     event.preventDefault();
-    window.location.href = "/producto.html";
+    window.location.href = "./producto.html";
 });
